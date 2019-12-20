@@ -20,7 +20,7 @@ class WeightSummaryFragment : Fragment() {
         // Inflate the layout for this fragment
         val binding: FragmentWeightSummaryBinding = DataBindingUtil.inflate(inflater,R.layout.fragment_weight_summary, container, false)
         binding.idBtnEntry.setOnClickListener{ view -> Navigation.findNavController(view).navigate(R.id.action_weightSummaryFragment2_to_weightEntryFragment)}
-        return binding.root;
+        return binding.root
     }
 
 }
