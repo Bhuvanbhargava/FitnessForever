@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/fitness_navigation"
+    app:startDestination="@id/weightSummaryFragment2">
+    <fragment
+        android:id="@+id/weightEntryFragment"
+        android:name="edu.bellevue.bhuvan.WeightEntryFragment"
+        android:label="WeightEntryFragment" >
+        <action
+            android:id="@+id/action_weightEntryFragment_to_weightSummaryFragment2"
+            app:destination="@id/weightSummaryFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/weightSummaryFragment2"
+        android:name="edu.bellevue.bhuvan.WeightSummaryFragment"
+        android:label="WeightSummaryFragment" >
+        <action
+            android:id="@+id/action_weightSummaryFragment2_to_weightEntryFragment"
+            app:destination="@id/weightEntryFragment" />
+        <action
+            android:id="@+id/action_weightSummaryFragment2_to_historyFragment"
+            app:destination="@id/historyFragment" />
+        <action
+            android:id="@+id/action_weightSummaryFragment2_to_progressPictureFragment"
+            app:destination="@id/progressPictureFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="edu.bellevue.bhuvan.HistoryFragment"
+        android:label="HistoryFragment" >
+        <action
+            android:id="@+id/action_historyFragment_to_weightSummaryFragment2"
+            app:destination="@id/weightSummaryFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/progressPictureFragment"
+        android:name="edu.bellevue.bhuvan.ProgressPictureFragment"
+        android:label="ProgressPictureFragment" >
+        <action
+            android:id="@+id/action_progressPictureFragment_to_weightSummaryFragment2"
+            app:destination="@id/weightSummaryFragment2" />
+    </fragment>
+</navigation>
