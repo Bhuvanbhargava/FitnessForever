@@ -15,6 +15,7 @@ class ProgressPictureFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+        activity?.title="Progress"
         return inflater.inflate(R.layout.fragment_progress_picture, container, false)
     }
 

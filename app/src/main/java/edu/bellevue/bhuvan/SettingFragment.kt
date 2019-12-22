@@ -16,6 +16,7 @@ class SettingFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        activity?.title="Settings"
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_setting, container, false)
     }

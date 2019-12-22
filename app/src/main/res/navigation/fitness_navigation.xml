@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/fitness_navigation"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fitness_navigation"
     app:startDestination="@id/weightSummaryFragment2">
     <fragment
         android:id="@+id/weightEntryFragment"
         android:name="edu.bellevue.bhuvan.WeightEntryFragment"
-        android:label="WeightEntryFragment" >
+        android:label="WeightEntryFragment"
+        tools:layout="@layout/fragment_weight_entry">
         <action
             android:id="@+id/action_weightEntryFragment_to_weightSummaryFragment2"
             app:destination="@id/weightSummaryFragment2" />
@@ -13,7 +16,8 @@
     <fragment
         android:id="@+id/weightSummaryFragment2"
         android:name="edu.bellevue.bhuvan.WeightSummaryFragment"
-        android:label="WeightSummaryFragment" >
+        android:label="WeightSummaryFragment"
+        tools:layout="@layout/fragment_weight_summary">
         <action
             android:id="@+id/action_weightSummaryFragment2_to_weightEntryFragment"
             app:destination="@id/weightEntryFragment" />
@@ -27,7 +31,8 @@
     <fragment
         android:id="@+id/historyFragment"
         android:name="edu.bellevue.bhuvan.HistoryFragment"
-        android:label="HistoryFragment" >
+        android:label="HistoryFragment"
+        tools:layout="@layout/fragment_history">
         <action
             android:id="@+id/action_historyFragment_to_weightSummaryFragment2"
             app:destination="@id/weightSummaryFragment2" />
@@ -35,9 +40,28 @@
     <fragment
         android:id="@+id/progressPictureFragment"
         android:name="edu.bellevue.bhuvan.ProgressPictureFragment"
-        android:label="ProgressPictureFragment" >
+        android:label="ProgressPictureFragment"
+        tools:layout="@layout/fragment_progress_picture">
         <action
             android:id="@+id/action_progressPictureFragment_to_weightSummaryFragment2"
+            app:destination="@id/weightSummaryFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="edu.bellevue.bhuvan.SettingFragment"
+        android:label="SettingFragment"
+        tools:layout="@layout/fragment_setting">
+        <action
+            android:id="@+id/action_settingFragment_to_weightSummaryFragment2"
+            app:destination="@id/weightSummaryFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/foodEntryFragment"
+        android:name="edu.bellevue.bhuvan.FoodEntryFragment"
+        android:label="fragment_food_entry"
+        tools:layout="@layout/fragment_food_entry" >
+        <action
+            android:id="@+id/action_foodEntryFragment_to_weightSummaryFragment2"
             app:destination="@id/weightSummaryFragment2" />
     </fragment>
 </navigation>
